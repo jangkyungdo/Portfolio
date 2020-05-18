@@ -13,7 +13,7 @@
       src="https://kit.fontawesome.com/01a5ae2eba.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="icon" type="image/png" href="img/favicon3.png" />
+    <link rel="icon" type="image/png" href="img/favicon2.png" />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
   </head>
@@ -37,13 +37,13 @@
 
     <!-- Home -->
     <section id="home">
-      <img src="img/avatar.png" alt="photo image" class="home__avatar" />
-      <h1 class="home__title">Learn, Think, Action</h1>
+      <img src="img/profile.png" alt="photo image" class="home__avatar" />
+      <h1 class="home__title">
+        안녕하세요. <br />
+        장경도의 포트폴리오입니다.
+      </h1>
       <h2 class="home__description">
-        안녕하세요.<br />
-        꾸준히 IT의 길을 걸어오고 있으며 배움에 겁먹지않고, 끊임없이 생각하며,
-        행동으로 실천하는 장경도입니다. Front-End에 관심이 많으며 최근에는
-        JavaScript, 반응형 웹, 사용자 인터랙션에도 관심을 두고 있습니다.
+        세상에 필요한것을 만드는데 도움을 주는 개발자를 꿈꾸는 장경도입니다.
       </h2>
       <button class="home__contact">contact me</button>
     </section>
@@ -52,7 +52,7 @@
     <!-- 나에대한 설명써야됨 -->
     <section id="about">
       <h1>About me</h1>
-
+      <h2>Learn, Think, Action</h2>
       <p>
         안녕하세요.<br />
         꾸준히 IT의 길을 걸어오고 있으며 배움에 겁먹지않고, 끊임없이 생각하며,
@@ -65,36 +65,36 @@
             <img src="img/html5.png" alt="skill icon" />
           </div>
           <div class="major__title">HTML</div>
-          <div class="major__description"></div>
+          <div class="major__description">HTML 설명</div>
         </div>
         <div class="major">
           <div class="major__icon">
             <img src="img/css3.png" alt="skill icon" />
           </div>
           <div class="major__title">CSS</div>
-          <div class="major__description"></div>
+          <div class="major__description">CSS 설명</div>
         </div>
         <div class="major">
           <div class="major__icon">
             <img src="img/javascript.png" alt="skill icon" />
           </div>
           <div class="major__title">JavaScript</div>
-          <div class="major__description"></div>
+          <div class="major__description">JS 설명</div>
         </div>
         <div class="about__education">
           <div class="education">
-            <img src="img/namseoul.png" alt="education icon" />
+            <img src="img/education/namseoul.png" alt="education icon" />
             <p class="education__name">남서울대학교 정보통신공학 전공</p>
             <p class="education__period">2013.03 ~ 2019.02</p>
           </div>
         </div>
         <div class="education">
-          <img src="img/kh.png" alt="education icon" />
+          <img src="img/education/kh.png" alt="education icon" />
           <p class="education__name">웹과정 공부</p>
           <p class="education__period">2019.01 ~ 2019.07</p>
         </div>
         <div class="education">
-          <img src="img/fastcampus.png" alt="education icon" />
+          <img src="img/education/fastcampus.png" alt="education icon" />
           <p class="education__name">패스트캠퍼스 JavaScript</p>
           <p class="education__period">2020.04 ~ 2020.06</p>
         </div>
@@ -136,9 +136,25 @@
     </section>
 
     <!-- Work -->
-    <section id="work"></section>
+    <section id="work">
+      <h1>My work</h1>
+      <h3>Projects</h3>
+      <div class="work__projects">
+        <a href="" class="project" target="blank">
+          <img src="img/projects/project.png" alt="project image" />
+          <div class="project__description">
+            <h3>Responsive Web</h3>
+            <span>Clone coding HTML, CSS, JavaScript</span>
+          </div>
+        </a>
+      </div>
+    </section>
 
     <!-- Contact -->
-    <section id="contact"></section>
+    <section id="contact">
+      <h1 class="contact__title">Contact Me!</h1>
+      <h2 class="contact__email">rudeh0926@naver.com</h2>
+      <a href="" target="blank"><i class="fab fa-github"></i></a>
+    </section>
   </body>
 </html>
