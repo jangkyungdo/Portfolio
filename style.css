@@ -156,6 +156,9 @@ button {
 .section {
   padding: 50px;
   text-align: center;
+  margin: auto;
+}
+.section__container {
   max-width: 1200px;
   margin: auto;
 }
@@ -219,4 +222,43 @@ button {
 
 .education__period {
   font-size: var(--font-micro);
+}
+
+/* Skill */
+#skills {
+  background: var(--color-yellow);
+}
+
+.skillset {
+  background: var(--color-dark-grey);
+  color: var(--color-light-white);
+  margin: 20px 0;
+  padding: 20px 40px;
+}
+
+.skillset__title {
+  color: var(--color-white);
+}
+
+.skill {
+  margin-bottom: 32px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 30px;
+  background: var(--color-grey);
+  border-radius: var(--size-border-radius);
+  overflow: hidden;
+}
+
+.skill__value {
+  height: 30px;
+  background: var(--color-orange);
 }
