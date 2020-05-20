@@ -359,3 +359,34 @@ button {
   height: 2px;
   background: var(--color-dark-white);
 }
+
+/* Contact */
+#contact {
+  background: var(--color-background);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__rights {
+  font-size: var(--font-small);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+.contact__links i {
+  transition: all var(--animation-duration) ease-in-out;
+}
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-blue);
+}
