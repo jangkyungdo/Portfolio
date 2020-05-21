@@ -32,6 +32,11 @@
           <li class="navbar__menu__item">Contact</li>
         </ul>
       </div>
+
+      <!-- Toglle button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
 
     <!-- Home -->
@@ -53,7 +58,6 @@
       <h1>About me</h1>
       <h2>Learn, Think, Action</h2>
       <p>
-        안녕하세요.<br />
         꾸준히 IT의 길을 걸어오고 있으며 배움에 겁먹지않고, 끊임없이 생각하며,
         행동으로 실천하는 장경도입니다. Front-End에 관심이 많으며 최근에는
         JavaScript, 반응형 웹, 사용자 인터랙션에도 관심을 두고 있습니다.
@@ -84,24 +88,26 @@
       <div class="about__education">
         <h2 class="education__title">Education</h2>
         <div class="education">
-          <img src="img/education/namseoul.png" alt="education icon" />
+          <img src="img/education/fastcampus.png" alt="education icon" />
           <div class="education__description">
-            <p class="education__name">남서울대학교 정보통신공학 전공</p>
-            <p class="education__period">2013.03 ~ 2019.02</p>
+            <p class="education__name">패스트캠퍼스 JavaScript 과정</p>
+            <p class="education__period">2020.04 ~ 2020.06</p>
           </div>
         </div>
         <div class="education">
           <img src="img/education/kh.png" alt="education icon" />
           <div class="education__description">
-            <p class="education__name">웹과정 공부</p>
+            <p class="education__name">
+              네트워크, 서버-클라이언트, 웹 관련 과정
+            </p>
             <p class="education__period">2019.01 ~ 2019.07</p>
           </div>
         </div>
         <div class="education">
-          <img src="img/education/fastcampus.png" alt="education icon" />
+          <img src="img/education/namseoul.png" alt="education icon" />
           <div class="education__description">
-            <p class="education__name">패스트캠퍼스 JavaScript</p>
-            <p class="education__period">2020.04 ~ 2020.06</p>
+            <p class="education__name">남서울대학교 정보통신공학 전공</p>
+            <p class="education__period">2013.03 ~ 2019.02</p>
           </div>
         </div>
       </div>
@@ -113,7 +119,11 @@
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
         <!-- 디테일한 나의 모습 성격, 자세 태도등 -->
-        <p>디테일한 나의 모습 성격, 자세 태도등</p>
+        <p class="skills__description">
+          배움에 대한 열정과 호기심이 있으며, 맡은 일엔 계획적이고 집중하여
+          최선을 다합니다. <br />또한, 어느 환경에 신속하게 적응할 자세가
+          되어있습니다.
+        </p>
         <div class="skillset">
           <h3 class="skillset__title">Skills</h3>
           <div class="skill">
@@ -149,41 +159,43 @@
 
     <!-- Work -->
     <section id="work" class="section">
-      <h1>My work</h1>
-      <h3>Projects</h3>
-      <div class="work__categories">
-        <button class="category__btn active">
-          All <span class="category__count">3</span>
-        </button>
-        <button class="category__btn">
-          Web Service <span class="category__count">3</span>
-        </button>
-        <button class="category__btn">
-          Web site <span class="category__count">3</span>
-        </button>
-      </div>
-      <div class="work__projects">
-        <a href="" class="project" target="blank">
-          <img src="img/projects/project.png" alt="project image" />
-          <div class="project__description">
-            <h3>Responsive Web</h3>
-            <span>Clone coding HTML, CSS, JavaScript</span>
-          </div>
-        </a>
-        <a href="" class="project" target="blank">
-          <img src="img/projects/project.png" alt="project image" />
-          <div class="project__description">
-            <h3>Responsive Web</h3>
-            <span>Clone coding HTML, CSS, JavaScript</span>
-          </div>
-        </a>
-        <a href="" class="project" target="blank">
-          <img src="img/projects/project.png" alt="project image" />
-          <div class="project__description">
-            <h3>Responsive Web</h3>
-            <span>Clone coding HTML, CSS, JavaScript</span>
-          </div>
-        </a>
+      <div class="section__container">
+        <h1>My work</h1>
+        <h3>Projects</h3>
+        <div class="work__categories">
+          <button class="category__btn active">
+            All <span class="category__count">3</span>
+          </button>
+          <button class="category__btn">
+            Web Service <span class="category__count">3</span>
+          </button>
+          <button class="category__btn">
+            Web site <span class="category__count">3</span>
+          </button>
+        </div>
+        <div class="work__projects">
+          <a href="" class="project" target="blank">
+            <img src="img/projects/project.png" alt="project image" />
+            <div class="project__description">
+              <h3>Responsive Web</h3>
+              <span>Clone coding HTML, CSS, JavaScript</span>
+            </div>
+          </a>
+          <a href="" class="project" target="blank">
+            <img src="img/projects/project.png" alt="project image" />
+            <div class="project__description">
+              <h3>Responsive Web</h3>
+              <span>Clone coding HTML, CSS, JavaScript</span>
+            </div>
+          </a>
+          <a href="" class="project" target="blank">
+            <img src="img/projects/project.png" alt="project image" />
+            <div class="project__description">
+              <h3>Responsive Web</h3>
+              <span>Clone coding HTML, CSS, JavaScript</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 
