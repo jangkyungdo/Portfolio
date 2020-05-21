@@ -14,15 +14,25 @@ document.addEventListener("scroll", () => {
 
 // 2. 메뉴 클릭 할 경우 해당위치로 scroll
 const navbarMenu = document.querySelector(".navbar__menu");
+
 navbarMenu.addEventListener("click", (event) => {
-  const target = event.target;
-  const link = target.dataset.link;
+  const link = event.target.dataset.link;
   if (link == null) {
     //   ==, null,undefined type 상관없이 둘다
     return;
   } else {
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: "smooth" });
-    console.log(event.target.dataset.link);
+    scrollIntoView(link);
   }
 });
+
+// 2-1 contactBtn 클릭 할 경우 해당위치로 scroll
+const contactBtn = document.querySelector(".home__contact");
+
+contactBtn.addEventListener("click", () => {
+  scrollIntoView("#contact");
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
