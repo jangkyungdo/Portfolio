@@ -2,6 +2,12 @@
 
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
 
 // 1. scroll이라는 이벤트가 발생하면 해당 함수를 호출
 document.addEventListener("scroll", () => {

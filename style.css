@@ -147,6 +147,7 @@ button {
   padding: 40px;
   padding-top: 120px;
   text-align: center;
+  opacity: 1;
 }
 
 .home__avatar {
