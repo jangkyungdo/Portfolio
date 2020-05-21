@@ -90,12 +90,20 @@ button {
 }
 /* Nav */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: center/cover no-repeat url("/img/background.png");
+  background: transparent;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background: center/cover no-repeat url("img/background.png");
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -125,7 +133,7 @@ button {
 
 .navbar__toggle-btn {
   position: absolute;
-  top: 36px;
+  top: 32px;
   right: 32px;
   font-size: var(--font-medium);
   color: var(--color-white);
@@ -136,6 +144,7 @@ button {
 #home {
   background: center/cover no-repeat url("/img/background2.png");
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -251,8 +260,9 @@ button {
 .skillset {
   background: var(--color-dark-grey);
   color: var(--color-light-white);
-  margin: 20px 0;
+  margin: 20px auto;
   padding: 20px 40px;
+  width: 50%;
 }
 
 .skillset__title {
