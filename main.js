@@ -24,6 +24,12 @@ document.addEventListener("scroll", () => {
 const navbarMenu = document.querySelector(".navbar__menu");
 
 navbarMenu.addEventListener("click", (event) => {
+  const active = document.querySelector(".navbar__menu__item.selected");
+  if (active != null) {
+    active.classList.remove("selected");
+  }
+  event.target.classList.add("selected");
+
   const link = event.target.dataset.link;
   if (link == null) {
     //   ==, null,undefined type 상관없이 둘다
@@ -72,6 +78,12 @@ workBtnContainer.addEventListener("click", (event) => {
   if (filter == null) {
     return;
   }
+  // 선택된 버튼만 class 추가
+  const active = document.querySelector(".category__btn.selected");
+  if (active != null) {
+    active.classList.remove("selected");
+  }
+  event.target.classList.add("selected");
 
   projectContainer.classList.add("animation-out");
   // 버튼을 클릭했을 때 animation-out class(작아지고 내려가는) 추가
