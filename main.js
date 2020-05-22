@@ -1,6 +1,6 @@
 "use strict";
 
-// 1. scroll이라는 이벤트가 발생하면 해당 함수를 호출
+// 1. scroll이라는 이벤트가 발생하면 class추가 및 삭제
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
@@ -58,4 +58,38 @@ document.addEventListener("scroll", () => {
 // 3. arrowup--btn을 클릭 할 경우 위로 scroll
 arrowBtn.addEventListener("click", () => {
   scrollIntoView("#home");
+});
+
+// 4. work 버튼을 클릭 할 경우 project 이미지가 필터링
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+
+workBtnContainer.addEventListener("click", (event) => {
+  const filter =
+    event.target.dataset.filter || event.target.parentNode.dataset.filter;
+  // 버튼과 span버튼안에 있는 속성 data-filter값
+  if (filter == null) {
+    return;
+  }
+
+  projectContainer.classList.add("animation-out");
+  // 버튼을 클릭했을 때 animation-out class(작아지고 내려가는) 추가
+
+  setTimeout(() => {
+    projects.forEach((project) => {
+      // 배열 각각(project)을 순회
+      if (filter === "*" || filter === project.dataset.type) {
+        // 버튼에 filter값이 *이거나 project type값이 같다면
+        // 안보이는게 하는 class를 삭제
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("animation-out");
+  }, 300);
+  // setTimeout, 300초가 지나면 필터링 되면서
+  // animation-out class(작아지고 내려가는) 삭제
+  // setTimeout을 사용하지 않을 경우 필터링 후 animation이 적용되서 부자연스럽다.
 });

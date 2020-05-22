@@ -336,6 +336,13 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.animation-out {
+  opacity: 0;
+  transform: scale(0.95) translateY(50px);
 }
 
 .project {
@@ -347,6 +354,10 @@ button {
   height: 250px;
   margin: 2px;
   background: var(--color-light-white);
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project img {
@@ -469,6 +480,10 @@ button {
 
   .major {
     margin-bottom: 38px;
+  }
+
+  .skillset {
+    width: 100%;
   }
 
   .project {
