@@ -190,11 +190,6 @@ button {
   margin: auto;
 }
 /* About */
-#about {
-  opacity: 1;
-  transform: translateY(50px);
-  transition: all var(--animation-duration) ease-in;
-}
 
 #about p {
   color: var(--color-light-grey);
@@ -541,7 +536,7 @@ button {
   }
 
   .education img {
-    width: 50%;
+    width: 30%;
   }
 
   .skillset {

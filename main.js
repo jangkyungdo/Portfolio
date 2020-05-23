@@ -73,7 +73,7 @@ document.addEventListener("scroll", () => {
     arrowBtn.classList.remove("visible");
   }
 });
-// 3. arrow up--btn을 클릭 할 경우 위로 scroll
+// 3-1. arrow up--btn을 클릭 할 경우 위로 scroll
 arrowBtn.addEventListener("click", () => {
   scrollIntoView("#home");
 });
@@ -90,16 +90,20 @@ workBtnContainer.addEventListener("click", (event) => {
   if (filter == null) {
     return;
   }
-  // 선택된 버튼만 class 추가
+  // 선택된 버튼만 하이라이트 class 추가
   const active = document.querySelector(".category__btn.selected");
   if (active != null) {
     active.classList.remove("selected");
+  } else {
+    event.target.classList.add("selected");
   }
-  event.target.classList.add("selected");
 
-  projectContainer.classList.add("animation-out");
   // 버튼을 클릭했을 때 animation-out class(작아지고 내려가는) 추가
+  projectContainer.classList.add("animation-out");
 
+  // setTimeout, 300초가 지나면 필터링 되면서
+  // animation-out class(작아지고 내려가는) 삭제
+  // setTimeout을 사용하지 않을 경우 필터링 후 animation이 적용되서 부자연스럽다.
   setTimeout(() => {
     projects.forEach((project) => {
       // 배열 각각(project)을 순회
@@ -113,7 +117,4 @@ workBtnContainer.addEventListener("click", (event) => {
     });
     projectContainer.classList.remove("animation-out");
   }, 300);
-  // setTimeout, 300초가 지나면 필터링 되면서
-  // animation-out class(작아지고 내려가는) 삭제
-  // setTimeout을 사용하지 않을 경우 필터링 후 animation이 적용되서 부자연스럽다.
 });
