@@ -22,6 +22,11 @@ document.addEventListener("scroll", () => {
 
 // 2. 메뉴 클릭 할 경우 해당위치로 scroll
 const navbarMenu = document.querySelector(".navbar__menu");
+const navbarLog = document.querySelector(".navbar__logo img");
+
+navbarLog.addEventListener("click", () => {
+  scrollIntoView("#home");
+});
 
 navbarMenu.addEventListener("click", (event) => {
   const active = document.querySelector(".navbar__menu__item.selected");
@@ -39,7 +44,14 @@ navbarMenu.addEventListener("click", (event) => {
   }
 });
 
-// 2-1 contactBtn 클릭 할 경우 해당위치로 scroll
+// 2-1. toggle button
+const toggleBtn = document.querySelector(".navbar__toggle-btn");
+
+toggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("toggle");
+});
+
+// 2-2 contactBtn 클릭 할 경우 해당위치로 scroll
 const contactBtn = document.querySelector(".home__contact");
 
 contactBtn.addEventListener("click", () => {
@@ -61,7 +73,7 @@ document.addEventListener("scroll", () => {
     arrowBtn.classList.remove("visible");
   }
 });
-// 3. arrowup--btn을 클릭 할 경우 위로 scroll
+// 3. arrow up--btn을 클릭 할 경우 위로 scroll
 arrowBtn.addEventListener("click", () => {
   scrollIntoView("#home");
 });
