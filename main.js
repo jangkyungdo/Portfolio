@@ -3,6 +3,9 @@
 // 1. scroll이라는 이벤트가 발생하면 class추가 및 삭제
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
+const about = document.querySelector("#about");
+const aboutHeight = about.getBoundingClientRect().height;
+const skillValue = document.querySelectorAll(".skill__value");
 
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
@@ -10,6 +13,15 @@ document.addEventListener("scroll", () => {
   } else {
     navbar.classList.remove("navbar--dark");
   }
+  // skillbar 동적
+  skillValue.forEach((skillValue) => {
+    const sum = homeHeight + aboutHeight;
+    if (window.scrollY > sum) {
+      skillValue.classList.add("right");
+    } else {
+      skillValue.classList.remove("right");
+    }
+  });
 });
 
 // 1-1. home 화면이 내려갈수록 투명하게

@@ -135,9 +135,10 @@ button {
 }
 
 .navbar__toggle-btn {
-  position: fixed;
-  top: 3%;
-  right: 32px;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
   font-size: var(--font-medium);
   color: var(--color-white);
   display: none;
@@ -146,14 +147,13 @@ button {
 /* Home */
 #home {
   background: center/cover no-repeat url("img/background2.png");
-  padding: 40px;
-  padding-top: 120px;
+  padding: 120px 40px;
   text-align: center;
 }
 
 .home__avatar {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
 }
@@ -299,6 +299,12 @@ button {
 .skill__value {
   height: 30px;
   background: var(--color-orange);
+  transform: translateX(-100%);
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.skill__value.right {
+  transform: translateX(0px);
 }
 
 /* Work */
@@ -477,6 +483,7 @@ button {
   opacity: 1;
   transform: translateY(0px);
 } */
+
 /* 768px 이하 viewport */
 @media screen and (max-width: 768px) {
   :root {
@@ -486,18 +493,6 @@ button {
     --font-regular: 16px;
     --font-small: 14px;
     --font-micro: 12px;
-  }
-
-  .navbar__toggle-btn {
-    display: block;
-    font-size: 28px;
-    right: 20px;
-  }
-  #navbar.navbar--dark .navbar__toggle-btn {
-    top: 2%;
-  }
-  .navbar__menu.toggle {
-    display: block;
   }
 
   #navbar {
@@ -514,6 +509,11 @@ button {
     width: 10%;
   }
 
+  .navbar__toggle-btn {
+    display: block;
+    font-size: 28px;
+  }
+
   .navbar__menu {
     flex-direction: column;
     text-align: center;
@@ -521,8 +521,17 @@ button {
     display: none;
   }
 
+  .navbar__menu.toggle {
+    display: block;
+  }
+
+  .navbar__menu.toggle ~ .navbar__toggle-btn {
+    top: 12%;
+  }
+
   .section {
     padding: 16px;
+
     padding-top: 40px;
   }
 
