@@ -291,7 +291,6 @@ button {
   border-radius: var(--size-border-radius);
   overflow: hidden;
 }
-
 .skill__value {
   height: 30px;
   background: var(--color-orange);
@@ -300,7 +299,7 @@ button {
 }
 
 .skill__value.right {
-  transform: translateX(0px);
+  transform: translateX(0%);
 }
 
 /* Work */
@@ -507,16 +506,47 @@ button {
     width: 50%;
   }
 
+  .navbar__toggle-btn span {
+    display: block;
+    width: 80%;
+    height: 5px;
+    background: white;
+    transition: all var(--animation-duration) ease-in-out;
+    position: absolute;
+  }
+
+  .navbar__toggle-btn span:nth-child(1) {
+    top: 10%;
+  }
+  .navbar__toggle-btn span:nth-child(2) {
+    top: 35%;
+  }
+  .navbar__toggle-btn span:nth-child(3) {
+    top: 60%;
+  }
+
+  .navbar__toggle-btn.toggle span:nth-child(1) {
+    top: 35%;
+    transform: rotate(45deg);
+  }
+  .navbar__toggle-btn.toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar__toggle-btn.toggle span:nth-child(3) {
+    top: 35%;
+    transform: rotate(-45deg);
+  }
   .navbar__toggle-btn {
     display: block;
-    font-size: 28px;
+    /* font-size: 28px; */
+    width: 40px;
+    position: relative;
   }
 
   .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    /* display: none; */
     position: fixed;
     top: 55px;
     left: 0;
@@ -525,7 +555,7 @@ button {
     padding: 16px 0;
     margin: 0;
     transform: translateY(-30%);
-    transition: all var(--animation-duration) ease-in-out;
+    transition: all var(--animation-duration) ease-in;
   }
 
   .navbar__menu.toggle {
@@ -533,15 +563,11 @@ button {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0%);
+    transition: all var(--animation-duration) ease-out;
   }
-
-  /* .navbar__menu.toggle ~ .navbar__toggle-btn {
-    top: 12%;
-  } */
 
   .section {
     padding: 16px;
-
     padding-top: 40px;
   }
 

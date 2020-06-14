@@ -4,10 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1. scroll이라는 이벤트가 발생하면 class추가 및 삭제
   const navbar = document.querySelector("#navbar");
   const navbarHeight = navbar.getBoundingClientRect().height;
-  console.log(navbarHeight);
   const about = document.querySelector("#about");
   const aboutHeight = about.getBoundingClientRect().height;
   const skillValue = document.querySelectorAll(".skill__value");
+  const skills = document.querySelector("#skills");
+  const skillsHeight = skills.getBoundingClientRect().height;
 
   document.addEventListener("scroll", () => {
     if (window.scrollY > navbarHeight) {
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // skillbar 동적
     skillValue.forEach((skillValue) => {
-      const sum = homeHeight + aboutHeight;
+      const sum = homeHeight + aboutHeight + skillsHeight / 3;
       if (window.scrollY > sum) {
         skillValue.classList.add("right");
       } else {
@@ -64,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toggleBtn.addEventListener("click", () => {
     navbarMenu.classList.toggle("toggle");
+    toggleBtn.classList.toggle("toggle");
   });
 
   // 2-2 contactBtn 클릭 할 경우 해당위치로 scroll
