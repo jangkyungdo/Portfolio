@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // skillbar 동적
     skillValue.forEach((skillValue) => {
-      const sum = homeHeight + aboutHeight + skillsHeight / 3;
+      const sum = homeHeight + aboutHeight + navbarHeight;
       if (window.scrollY > sum) {
         skillValue.classList.add("right");
       } else {
