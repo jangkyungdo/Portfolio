@@ -1,14 +1,11 @@
 "use strict";
+
 document.addEventListener("DOMContentLoaded", () => {
-  // test.style.height =
-  // 1. scroll이라는 이벤트가 발생하면 class추가 및 삭제
   const navbar = document.querySelector("#navbar");
   const navbarHeight = navbar.getBoundingClientRect().height;
   const about = document.querySelector("#about");
   const aboutHeight = about.getBoundingClientRect().height;
   const skillValue = document.querySelectorAll(".skill__value");
-  const skills = document.querySelector("#skills");
-  const skillsHeight = skills.getBoundingClientRect().height;
 
   document.addEventListener("scroll", () => {
     if (window.scrollY > navbarHeight) {
