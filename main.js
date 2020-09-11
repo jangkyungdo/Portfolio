@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
       projects.forEach((project) => {
         // 배열 각각(project)을 순회
         if (filter === "*" || filter === project.dataset.type) {
-          // 버튼에 filter값이 *이거나 project type값이 같다면
+          // 누른 버튼에 filter값이 *이거나 project type값과 같다면
           // 안보이는게 하는 class를 삭제
           project.classList.remove("invisible");
         } else {

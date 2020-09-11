@@ -263,11 +263,24 @@ button {
 }
 
 .skillset {
+  display: flex;
   background: var(--color-dark-grey);
   color: var(--color-light-white);
   margin: 20px auto;
   padding: 20px 40px;
-  width: 50%;
+  width: 100%;
+}
+
+.skill__main {
+  width: 100%;
+  margin-right: 40px;
+}
+
+.skill__etc {
+  background: var(--color-light-grey);
+  width: 70%;
+  padding: 0 20px;
+  color: var(--color-black);
 }
 
 .skillset__title {
