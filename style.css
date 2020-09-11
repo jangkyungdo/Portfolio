@@ -425,6 +425,9 @@ button {
   background: var(--color-dark-white);
 }
 
+.space {
+  padding: 10px;
+}
 /* Contact */
 #contact {
   background: var(--color-background);
